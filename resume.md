@@ -106,8 +106,8 @@ Student Research Assistant for *High Performance Database Research Center* (Miam
     services. Wrote small scripts and software tools in C, Python, HTML, and Javascript to automate and/or 
     reduce complexity and time of maintainence tasks. Performed and helped to write research in the area of 
     geospatial database algorithms - especially join operations, nearest neighbor and range queries, and index 
-    structures. Gave seminars regarding good coding practices as well as database-related algorithms such
-    as DBSCAN.
+    structures. Hosted and led seminars regarding good coding practices as well as database-related algorithms
+    such as DBSCAN.
 
 Projects
 --------
