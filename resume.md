@@ -49,63 +49,6 @@ Technical Skills
 + **Source Control Software**: Git/GitHub and Team Foundation Server
 + **Technical Skills**: Algorithms, back-end development, database design, inter-process communication, multiprocessing, multithreading, object-oriented programmming, procedural programming, regular expressions, scripting, socket programming, software engineering, and software testing.
 
-Courses Taken
--------------
-<table>
-  <tr>
-    <td>Calculus I</td>
-    <td>Calculus II</td>
-    <td>Physics w/o Calculus I</td>
-    <td>Physics w/o Calculus II</td>
-    <td>Discrete Mathematics</td>
-  </tr>
-  <tr>
-    <td>Introduction to Computing</td>
-    <td>Physics w/ Calculus I</td>
-    <td>Physics w/ Calculus II</td>
-    <td>Programming I</td>
-    <td>Technology, Humans, and Society</td>
-  </tr>
-  <tr>
-    <td>Fundamentals of Computer Systems</td>
-    <td>Probability & Statistics for CS</td>
-    <td>Professional Technical Writing Composition</td>
-    <td>Programming II</td>
-    <td>Data Structures</td>
-  </tr>
-  <tr>
-    <td>Introduction to Psychology</td>
-    <td>Logic for Computer Science</td>
-    <td>Structured Computer Organization</td>
-    <td>Introduction to Database Management Systems</td>
-    <td>Principles of Programming Languages</td>
-  </tr>
-  <tr>
-    <td>Programming III</td>
-    <td>Technology in the Global Arena</td>
-    <td>Net-Centric Computing</td>
-    <td>Principles of Data Mining</td>
-    <td>Principles of Database Management Systems</td>
-  </tr>
-  <tr>
-    <td>Software Engineering I</td>
-    <td>Advanced Unix Programming</td>
-    <td>General Biology I</td>
-    <td>General Biology I Lab</td>
-    <td>Telecommunications Network Programming</td>
-  </tr>
-  <tr>
-    <td>Theory of Algorithms</td>
-    <td>Advanced Windows Programming</td>
-    <td>Information Systems</td>
-    <td>Operating Systems Principles</td>
-    <td>Senior Project</td>
-  </tr>
-  <tr>
-    <td>Survey of Database Systems</td>
-  </tr>
-</table>
-
 Work Experience
 ---------------
 **2015-**
@@ -169,4 +112,59 @@ Activities
     students in various CS and math courses. Dedicated over 100 hours of public service to the organization and
     the CS community.
 
-
+Courses Taken
+-------------
+<table>
+  <tr>
+    <td>Calculus I</td>
+    <td>Calculus II</td>
+    <td>Physics w/o Calculus I</td>
+    <td>Physics w/o Calculus II</td>
+    <td>Discrete Mathematics</td>
+  </tr>
+  <tr>
+    <td>Introduction to Computing</td>
+    <td>Physics w/ Calculus I</td>
+    <td>Physics w/ Calculus II</td>
+    <td>Programming I</td>
+    <td>Technology, Humans, and Society</td>
+  </tr>
+  <tr>
+    <td>Fundamentals of Computer Systems</td>
+    <td>Probability & Statistics for CS</td>
+    <td>Professional Technical Writing Composition</td>
+    <td>Programming II</td>
+    <td>Data Structures</td>
+  </tr>
+  <tr>
+    <td>Introduction to Psychology</td>
+    <td>Logic for Computer Science</td>
+    <td>Structured Computer Organization</td>
+    <td>Introduction to Database Management Systems</td>
+    <td>Principles of Programming Languages</td>
+  </tr>
+  <tr>
+    <td>Programming III</td>
+    <td>Technology in the Global Arena</td>
+    <td>Net-Centric Computing</td>
+    <td>Principles of Data Mining</td>
+    <td>Principles of Database Management Systems</td>
+  </tr>
+  <tr>
+    <td>Software Engineering I</td>
+    <td>Advanced Unix Programming</td>
+    <td>General Biology I</td>
+    <td>General Biology I Lab</td>
+    <td>Telecommunications Network Programming</td>
+  </tr>
+  <tr>
+    <td>Theory of Algorithms</td>
+    <td>Advanced Windows Programming</td>
+    <td>Information Systems</td>
+    <td>Operating Systems Principles</td>
+    <td>Senior Project</td>
+  </tr>
+  <tr>
+    <td>Survey of Database Systems</td>
+  </tr>
+</table>
