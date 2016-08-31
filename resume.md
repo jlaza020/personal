@@ -110,9 +110,9 @@ Activities
 **FIU STARS**: *Student Organization Treasurer & Tutor and Mentor for undergraduate CS students.*  
 
     Served as a treasurer for a FIU STARS - a student-led organization dedicated to public service and active 
-    engagement in the field of Computer Science and Computer Engineering. Tutored and mentored undergraduate CS
-    students in various CS and math courses. Dedicated over 100 hours of public service to the organization and
-    the CS community.
+    engagement in the fields of Computer Science and Computer Engineering. Tutored and mentored undergraduate 
+    CS students in various CS and math courses. Dedicated over 100 hours of public service to the organization
+    and the CS community.
 
 Courses Taken
 -------------
