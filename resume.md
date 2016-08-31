@@ -100,7 +100,9 @@ Work Experience
 **2015-**
 Student Research Assistant for *High Performance Database Research Center* (Miami, Florida)  
 
-    Managed, led, and contributed towards various geospatial-related projects. Maintained spatial keyword 
+    Managed, led, and contributed towards various geospatial-related projects - especially those related to 
+    Terrafly, a set of technologies utilized for the visualization and querying of geospatial data. Maintained
+    spatial keyword 
     legacy system by loading, testing, and debugging datasets. Edited and rewrote parts of the legacy system's
     Java code to solve relevant loading and testing issues or increase the efficiency/responsiveness of web 
     services. Wrote small scripts and software tools in C, Python, HTML, and Javascript to automate and/or 
