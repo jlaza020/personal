@@ -6,8 +6,9 @@ jlaza020@fiu.edu
 Career Objective
 ----------------
 
-    To have a challenging career in the industry and to associate with an organization that can utilize my
-    skills, ability and knowledge and provide me an oppurtunity for professional growth and satisfaction.    
+    To establish career development through solving intellectually challenging problems as a team player
+    in various subfields including - but not limited to - databases and data mining as well as 
+    engineering and developing effective and efficient software for clients and other developers. 
 
 Education
 ---------
@@ -33,14 +34,18 @@ High School Diploma at *Miami Lakes Educational Center* with a GPA of 3.60.
 
 Technical Skills
 ----------------
-+ **Applications**: Microsoft Office, Virtual Box, Team Foundation Server, and Git/GitHub  
++ **Applications**: Microsoft Office and Virtual Box
++ **Communication Software**: Slack and Google Hangouts
 + **Databases**: PostgreSQL and MongoDB  
 + **Development Environments**: Visual Studio and Netbeans
++ **Development Methodologies**: Scrum and Agile
++ **Development Software Tools**: Mingle and Trello
 + **Frameworks**: Twitter Bootstrap and ExpressJS
 + **Misc. Languages**: SQL, HTML, XML, Markdown, and CSS
 + **Operating Systems**: Windows (XP, 7, 8.1, 10) and Unix/Linux (CentOS, Ubuntu)  
 + **Programming Languages**: Java, C, C++, PL/pgSQL, JavaScript (NodeJS), C#, and Assembly
-+ **Scripting Languages**: Python and JavaScript (client-side) 
++ **Scripting Languages**: Python and JavaScript (client-side)
++ **Source Control Software**: Git/GitHub and Team Foundation Server
 
 Courses Taken
 -------------
