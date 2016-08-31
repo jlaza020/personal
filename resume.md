@@ -47,7 +47,7 @@ Technical Skills
 + **Programming Languages**: Java, C, C++, PL/pgSQL, JavaScript (NodeJS), C#, and Assembly
 + **Scripting Languages**: Python and JavaScript (client-side)
 + **Source Control Software**: Git/GitHub and Team Foundation Server
-+ **Technical Skills**: algorithms, back-end development, database design, niter-process communication, multiprocessing, multithreading, object-oriented programmming, procedural programming, regular expressions, scripting, socket programming, software engineering, testing.
++ **Technical Skills**: Algorithms, back-end development, database design, inter-process communication, multiprocessing, multithreading, object-oriented programmming, procedural programming, regular expressions, scripting, socket programming, software engineering, and testing.
 
 Courses Taken
 -------------
