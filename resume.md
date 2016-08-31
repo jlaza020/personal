@@ -113,7 +113,7 @@ Activities
 
 Projects
 --------
-**fetchit**: *A YouTube video and audio download service.*  
+**fetchit**: *A YouTube video and audio downloading service.*  
 
     Contributed as the sole author towards an application that allows for the dynamic downloading and 
     transferring of YouTube web content (video and audio) in various formats via any FTP client. The application
