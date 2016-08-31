@@ -3,7 +3,7 @@
 786-709-6927  
 jlaza020@fiu.edu  
 
-<p align="center"><strong>std::cout << "hi" << endl;</strong></p>
+<p align="center"><strong>std::cout << "Welcome" << endl;</strong></p>
 
 Career Objective
 ----------------
