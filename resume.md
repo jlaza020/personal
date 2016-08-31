@@ -22,7 +22,7 @@ Education
 `Anticipated Graduation: Fall 2017`
 
 **2013-**
-*Bachelor of Science in Computer Science* at **Florida International University** (Miami, Florida) with a GPA of 3.81.
+*Bachelor of Science in Computer Science* at **Florida International University** (Miami, Florida) with a GPA of *3.81*.
  
 `Anticipated Graduation: Fall 2016`
  
@@ -31,7 +31,7 @@ Education
     five-year curriculum compared to the traditional six.
 
 **2009-2013**
-*High School Diploma* at **Miami Lakes Educational Center** (Miami Lakes, Florida) with a GPA of 3.60.
+*High School Diploma* at **Miami Lakes Educational Center** (Miami Lakes, Florida) with a GPA of *3.60*.
 
     Received OCP-D Electronics Technician certification through specialized academic program.
 
