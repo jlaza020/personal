@@ -36,7 +36,7 @@ Technical Skills
 + **Applications**: Microsoft Office, Virtual Box, Team Foundation Server, and Git/GitHub  
 + **Databases**: PostgreSQL and MongoDB  
 + **Development Environments**: Visual Studio and Netbeans
-+ **Frameworks**: ExpressJS
++ **Frameworks**: Twitter Bootstrap and ExpressJS
 + **Misc. Languages**: HTML, CSS, SQL, and PLPGSQL  
 + **Operating Systems**: Windows (XP, 7, 8.1, 10) and Unix/Linux (CentOS, Ubuntu)  
 + **Programming Languages**: Java, C, C++, Javascript (NodeJS), C#, and Assembly
