@@ -37,9 +37,9 @@ Technical Skills
 + **Databases**: PostgreSQL and MongoDB  
 + **Development Environments**: Visual Studio and Netbeans
 + **Frameworks**: Twitter Bootstrap and ExpressJS
-+ **Misc. Languages**: HTML, CSS, SQL, and PLPGSQL  
++ **Misc. Languages**: SQL, HTML, XML, Markdown, and CSS
 + **Operating Systems**: Windows (XP, 7, 8.1, 10) and Unix/Linux (CentOS, Ubuntu)  
-+ **Programming Languages**: Java, C, C++, Javascript (NodeJS), C#, and Assembly
++ **Programming Languages**: Java, C, C++, PLPGSQL, Javascript (NodeJS), C#, and Assembly
 + **Scripting Languages**: Python and Javascript (client-side) 
 
 Courses Taken
