@@ -33,22 +33,6 @@ Education
 
     Received OCP-D Electronics Technician certification through specialized academic program.
 
-Technical Skills
-----------------
-+ **Applications**: Microsoft Office and Virtual Box
-+ **Communication Software**: Slack and Google Hangouts
-+ **Databases**: PostgreSQL and MongoDB  
-+ **Development Environments**: Visual Studio and Netbeans
-+ **Development Methodologies**: Scrum and Agile
-+ **Development Software Tools**: Mingle and Trello
-+ **Frameworks**: Twitter Bootstrap and ExpressJS
-+ **Misc. Languages**: SQL, HTML, XML, Markdown, and CSS
-+ **Operating Systems**: Windows (XP, 7, 8.1, 10) and Unix/Linux (CentOS, Ubuntu)  
-+ **Programming Languages**: Java, C, C++, PL/pgSQL, JavaScript (NodeJS), C#, and Assembly
-+ **Scripting Languages**: Python and JavaScript (client-side)
-+ **Source Control Software**: Git/GitHub and Team Foundation Server
-+ **Technical Skills**: Algorithms, back-end development, database design, inter-process communication, multiprocessing, multithreading, object-oriented programmming, procedural programming, regular expressions, scripting, socket programming, software engineering, and software testing.
-
 Work Experience
 ---------------
 **2015-**
@@ -72,6 +56,22 @@ Work Experience
     Coordinated and led private in-home tutoring sessions for K-12 students in subjects such as Reading, 
     Writing, and Math. Focused on reading comprehension, persuasive writing skills, and basic mathematical
     concepts. Helped students to prepare for FCAT by proctoring and reviewing practice exams.
+
+Technical Skills
+----------------
++ **Applications**: Microsoft Office and Virtual Box
++ **Communication Software**: Slack and Google Hangouts
++ **Databases**: PostgreSQL and MongoDB  
++ **Development Environments**: Visual Studio and Netbeans
++ **Development Methodologies**: Scrum and Agile
++ **Development Software Tools**: Mingle and Trello
++ **Frameworks**: Twitter Bootstrap and ExpressJS
++ **Misc. Languages**: SQL, HTML, XML, Markdown, and CSS
++ **Operating Systems**: Windows (XP, 7, 8.1, 10) and Unix/Linux (CentOS, Ubuntu)  
++ **Programming Languages**: Java, C, C++, PL/pgSQL, JavaScript (NodeJS), C#, and Assembly
++ **Scripting Languages**: Python and JavaScript (client-side)
++ **Source Control Software**: Git/GitHub and Team Foundation Server
++ **Technical Skills**: Algorithms, back-end development, database design, inter-process communication, multiprocessing, multithreading, object-oriented programmming, procedural programming, regular expressions, scripting, socket programming, software engineering, and software testing.
 
 Projects
 --------
