@@ -47,6 +47,7 @@ Technical Skills
 + **Programming Languages**: Java, C, C++, PL/pgSQL, JavaScript (NodeJS), C#, and Assembly
 + **Scripting Languages**: Python and JavaScript (client-side)
 + **Source Control Software**: Git/GitHub and Team Foundation Server
++ **Technical Skills**: algorithms, back-end development, database configuration, database querying, integration testing, inter-process communication, multiprocessing, multithreading, object-oriented programmming, procedural programming, REST services, scripting, socket programming, software engineering, and unit testing.
 
 Courses Taken
 -------------
@@ -159,7 +160,7 @@ Activities
     Managed and led a Google-funded project pioneered by Georgia Tech to increase the involvement and success
     of underprivledged high school minorities in the field of Computer Science. In particular, planned and 
     hosted webinars and in-person meetings to prepare students for the AP Computer Science A Exam for 2 years. 
-    Additionally, coordinated fun Java projects for students to participate in.
+    Additionally, coordinated fun Java projects with co-leaders and co-managers for students to participate in.
   
 **FIU STARS**: *Student Organization Treasurer & Tutor and Mentor for undergraduate CS students.*  
 
