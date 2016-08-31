@@ -1,7 +1,9 @@
 **Jahkell Lazarre**  
 20075 NE 3rd Ct Apt 8  
 786-709-6927  
-jlaza020@fiu.edu
+jlaza020@fiu.edu  
+
+<p align="center"><strong>std::cout << "hi" << endl;</strong></p>
 
 Career Objective
 ----------------
@@ -99,9 +101,9 @@ Activities
 ----------
 **Google RISE 4 CS**: *Project Manager, Webinar Leader, and Mentor for underprivileged high school CS students.*  
 
-    Managed and led a Google-funded project pioneered by Georgia Tech to increase the involvement and success of
-    underprivledged high school minorities in the field of Computer Science. In particular, planned and hosted 
-    webinars and in-person meetings to prepare students for the AP Computer Science A Exam for 2 years. 
+    Managed and led a Google-funded project pioneered by Georgia Tech to increase the involvement and success
+    of underprivledged high school minorities in the field of Computer Science. In particular, planned and 
+    hosted webinars and in-person meetings to prepare students for the AP Computer Science A Exam for 2 years. 
     Additionally, coordinated fun Java projects for students to participate in.
   
 **FIU STARS**: *Student Organization Treasurer & Tutor and Mentor for undergraduate CS students.*  
