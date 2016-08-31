@@ -29,7 +29,7 @@ High School Diploma at *Miami Lakes Educational Center* with a GPA of 3.60.
 
 Technical Skills
 ----------------
-+ **Applications**: Microsoft Office, Virtual Box, and Git/GitHub  
++ **Applications**: Microsoft Office, Virtual Box, Team Foundation Server, and Git/GitHub  
 + **Databases**: PostgreSQL and MongoDB  
 + **Development Environments**: Visual Studio and Netbeans
 + **Frameworks**: ExpressJS
@@ -111,6 +111,13 @@ Student Research Assistant for *High Performance Database Research Center* (Miam
     geospatial database algorithms - especially join operations, nearest neighbor and range queries, and index 
     structures. Hosted and led seminars regarding good coding practices as well as database-related algorithms
     such as DBSCAN.
+
+**2014-2015**
+Private Tutor for *LOVECHILD Development & Transition Partners* (Hallandale Beach, Florida)
+
+    Coordinated and led private in-home tutoring sessions for K-12 students in subjects such as Reading, 
+    Writing, and Math. Focused on reading comprehension, persuasive writing skills, and basic mathematical
+    concepts. Helped students to prepare for FCAT by proctoring and reviewing practice exams.
 
 Projects
 --------
