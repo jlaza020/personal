@@ -19,12 +19,12 @@ Education
 **2016-**
 *Master of Science in Computer Science* at **Florida International Univeristy** (Miami, Florida)
 
-**> Anticipated Graduation: Fall 2017**
+*Anticipated Graduation: Fall 2017
 
 **2013-**
 *Bachelor of Science in Computer Science* at **Florida International University** (Miami, Florida) with a GPA of 3.81.
  
-**> Anticipated Graduation: Fall 2016**
+*Anticipated Graduation: Fall 2016
  
     Enrolled in the 4+1 accelerated program that allows advanced undergraduate students to take 
     graduate-level courses to count towards both their undergraduate and graduate degrees, resulting in a 
