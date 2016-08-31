@@ -15,7 +15,7 @@ Education
 ---------
 
 **2016-**
-Master of Science in Computer Science at *Florida International Univeristy* (Miami, Florida)
+*Master of Science in Computer Science* at **Florida International Univeristy** (Miami, Florida)
 
 **> Anticipated Graduation: Fall 2017**
 
