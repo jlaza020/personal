@@ -2,6 +2,7 @@
 20075 NE 3rd Ct Apt 8  
 786-709-6927  
 jlaza020@fiu.edu  
+https://github.com/jlazarre95
 
 Career Objective
 ----------------
@@ -130,6 +131,11 @@ Private Tutor for *LOVECHILD Development & Transition Partners* (Hallandale Beac
 
 Projects
 --------
+**mpdbn**: *A multithreaded database normalization program.*  
+
+    Contributing as the sole author towards a program that normalizes a relational database given a universal 
+    set of attributes and functional dependencies, using multithreading to provide fast results.
+
 **fetchit**: *A YouTube video and audio downloading service.*  
 
     Contributed as the sole author towards an application that allows for the dynamic downloading and 
@@ -145,11 +151,6 @@ Projects
     Learning algorithm J48 Decision Tree to smartly predict student grades, using their transcripts as training 
     data. The library is made to be heavily extensible, abstracting the type of classification algorithm and the
     way the training data is received.
-  
-**mpdbn**: *A multithreaded database normalization program.*  
-
-    Contributing as the sole author towards a program that normalizes a relational database given a universal 
-    set of attributes and functional dependencies, using multithreading to provide fast results.
 
 Activities
 ----------
