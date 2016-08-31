@@ -103,8 +103,8 @@ Activities
 **Google RISE 4 CS**: *Project Manager, Webinar Leader, and Mentor for underprivileged high school CS students.*  
 
     Managed and led a Google-funded project pioneered by Georgia Tech to increase the involvement and success
-    of underprivledged high school minorities in the field of Computer Science. In particular, planned and 
-    hosted webinars and in-person meetings to prepare students for the AP Computer Science A Exam for 2 years. 
+    of underprivledged high school minorities in the field of Computer Science. For two years, planned and 
+    hosted webinars and in-person meetings to prepare students for the AP Computer Science A Exam. 
     Additionally, coordinated fun Java projects with co-leaders and co-managers for students to participate in.
   
 **FIU STARS**: *Student Organization Treasurer & Tutor and Mentor for undergraduate CS students.*  
