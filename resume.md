@@ -28,7 +28,7 @@ Education
  
     Enrolled in the 4+1 accelerated program that allows advanced undergraduate students to take 
     graduate-level courses to count towards both their undergraduate and graduate degrees, resulting in a 
-    5-year graduation compared to the traditional 6-year graduation.
+    five-year curriculum compared to the traditional six.
 
 **2009-2013**
 *High School Diploma* at **Miami Lakes Educational Center** (Miami Lakes, Florida) with a GPA of 3.60.
