@@ -95,21 +95,19 @@ Courses Taken
   </tr>
 </table>
 
-Activities
-----------
-**Google RISE 4 CS**: *Project Manager, Webinar Leader, and Mentor for underprivileged high school CS students.*  
+Work Experience
+---------------
+**2015-**
+Student Research Assistant for *High Performance Database Research Center* (Miami, Florida)  
 
-    Managed and led a Google-funded project pioneered by Georgia Tech to increase the involvement and success
-    of underprivledged high school minorities in the field of Computer Science. In particular, planned and 
-    hosted webinars and in-person meetings to prepare students for the AP Computer Science A Exam for 2 years. 
-    Additionally, coordinated fun Java projects for students to participate in.
-  
-**FIU STARS**: *Student Organization Treasurer & Tutor and Mentor for undergraduate CS students.*  
-
-    Served as a treasurer for a FIU STARS - a student-led organization dedicated to public service and active 
-    engagement in the field of Computer Science and Computer Engineering. Tutored and mentored undergraduate CS
-    students in various CS and math courses. Dedicated over 100 hours of public service to the organization and
-    the CS community.
+    Managed, led, and contributed towards various geospatial-related projects. Maintained spatial keyword 
+    legacy system by loading, testing, and debugging datasets. Edited and rewrote parts of the legacy system's
+    Java code to solve relevant loading and testing issues or increase the efficiency/responsiveness of the
+    web service. Wrote small scripts and software tools in C and Python to automate and/or reduce
+    complexity and time of maintainence tasks. Performed and helped to write research in the area of
+    geospatial database algorithms - especially join operations, nearest neighbor and range queries, and index 
+    structures. Gave seminars regarding good coding practices as well as database-related algorithms such
+    as DBSCAN.
 
 Projects
 --------
@@ -133,5 +131,21 @@ Projects
 
     Contributing as the sole author towards a program that normalizes a relational database given a universal 
     set of attributes and functional dependencies, using multithreading to provide fast results.
+
+Activities
+----------
+**Google RISE 4 CS**: *Project Manager, Webinar Leader, and Mentor for underprivileged high school CS students.*  
+
+    Managed and led a Google-funded project pioneered by Georgia Tech to increase the involvement and success
+    of underprivledged high school minorities in the field of Computer Science. In particular, planned and 
+    hosted webinars and in-person meetings to prepare students for the AP Computer Science A Exam for 2 years. 
+    Additionally, coordinated fun Java projects for students to participate in.
+  
+**FIU STARS**: *Student Organization Treasurer & Tutor and Mentor for undergraduate CS students.*  
+
+    Served as a treasurer for a FIU STARS - a student-led organization dedicated to public service and active 
+    engagement in the field of Computer Science and Computer Engineering. Tutored and mentored undergraduate CS
+    students in various CS and math courses. Dedicated over 100 hours of public service to the organization and
+    the CS community.
 
 
