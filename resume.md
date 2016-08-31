@@ -102,11 +102,12 @@ Student Research Assistant for *High Performance Database Research Center* (Miam
 
     Managed, led, and contributed towards various geospatial-related projects - especially those related to 
     Terrafly, a set of technologies utilized for the visualization and querying of geospatial data. Maintained
-    spatial keyword 
-    legacy system by loading, testing, and debugging datasets. Edited and rewrote parts of the legacy system's
-    Java code to solve relevant loading and testing issues or increase the efficiency/responsiveness of web 
-    services. Wrote small scripts and software tools in C, Python, HTML, and Javascript to automate and/or 
-    reduce complexity and time of maintainence tasks. Performed and helped to write research in the area of 
+    spatial keyword legacy system by loading, testing, and debugging datasets. Edited and rewrote parts of the
+    legacy system's Java code to solve relevant loading and testing issues or increase the 
+    efficiency/responsiveness of web services. 
+    
+    Wrote small scripts and software tools in C, Python, HTML, and Javascript to automate and/or reduce 
+    complexity and time of maintainence tasks. Performed and helped to write research in the area of 
     geospatial database algorithms - especially join operations, nearest neighbor and range queries, and index 
     structures. Hosted and led seminars regarding good coding practices as well as database-related algorithms
     such as DBSCAN.
