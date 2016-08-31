@@ -1,5 +1,6 @@
 <h2 align="center">
     <strong>Jahkell Lazarre</strong><br />
+</h2>
     20075 NE 3rd Ct Apt 8<br/>
     786-709-6927<br />  
     <a href="jlaza020@fiu.edu">jlaza020@fiu.edu</a><br /> 
