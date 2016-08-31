@@ -26,7 +26,7 @@ Bachelor of Science in Computer Science at *Florida International University* wi
  
     Enrolled in the 4+1 accelerated program that allows advanced undergraduate students to take 
     graduate-level courses to count towards both their undergraduate and graduate degrees, resulting in a 
-    5-year graduation compared to the traditional 6 year-graduation.
+    5-year graduation compared to the traditional 6-year graduation.
 
 **2009-2013**
 High School Diploma at *Miami Lakes Educational Center* with a GPA of 3.60.
