@@ -39,8 +39,8 @@ Technical Skills
 + **Frameworks**: Twitter Bootstrap and ExpressJS
 + **Misc. Languages**: SQL, HTML, XML, Markdown, and CSS
 + **Operating Systems**: Windows (XP, 7, 8.1, 10) and Unix/Linux (CentOS, Ubuntu)  
-+ **Programming Languages**: Java, C, C++, PLPGSQL, Javascript (NodeJS), C#, and Assembly
-+ **Scripting Languages**: Python and Javascript (client-side) 
++ **Programming Languages**: Java, C, C++, PL/pgSQL, JavaScript (NodeJS), C#, and Assembly
++ **Scripting Languages**: Python and JavaScript (client-side) 
 
 Courses Taken
 -------------
