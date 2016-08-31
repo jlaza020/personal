@@ -109,7 +109,7 @@ Courses Taken
 Work Experience
 ---------------
 **2015-**
-Student Research Assistant for *High Performance Database Research Center* (Miami, Florida)  
+*Student Research Assistant* for **High Performance Database Research Center** (Miami, Florida)  
 
     Managed, led, and contributed towards various geospatial-related projects - especially those related to 
     Terrafly, a set of technologies utilized for the visualization and querying of geospatial data. Maintained
@@ -124,7 +124,7 @@ Student Research Assistant for *High Performance Database Research Center* (Miam
     such as DBSCAN.
 
 **2014-2015**
-Private Tutor for *LOVECHILD Development & Transition Partners* (Hallandale Beach, Florida)
+*Private Tutor* for **LOVECHILD Development & Transition Partners** (Hallandale Beach, Florida)
 
     Coordinated and led private in-home tutoring sessions for K-12 students in subjects such as Reading, 
     Writing, and Math. Focused on reading comprehension, persuasive writing skills, and basic mathematical
