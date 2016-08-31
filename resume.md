@@ -2,7 +2,7 @@
 20075 NE 3rd Ct Apt 8  
 786-709-6927  
 jlaza020@fiu.edu  
-https://github.com/jlazarre95
+GitHub: https://github.com/jlazarre95
 
 Career Objective
 ----------------
