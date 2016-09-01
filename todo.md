@@ -16,4 +16,4 @@
 + Survey of DBMS discussion due at 5:00pm
 
 ## Thu, 9/1/16
-+ Get DBMS book, read, and watch videos
++ Get DBMS book, read, and watch remaining 6 videos
