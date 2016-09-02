@@ -5,6 +5,7 @@
 
 ## Sun, 9/4/16
 + Work on OS Lab
++ Participate in Survey of DBMS ER discussion
 
 ## Sat, 9/3/16
 + OS C Review at 10am(-12:30pm) in ECS 241?
