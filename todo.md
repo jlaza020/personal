@@ -1,7 +1,9 @@
 ## Tue, 9/6/16
 + OS Quiz on Ch. 1-3
++ Adv. Windows video due at midnight
 
 ## Mon, 9/5/16
++ Adv. Windows assignment due at midnight
 
 ## Sun, 9/4/16
 + Work on OS Lab
@@ -10,7 +12,7 @@
 ## Sat, 9/3/16
 + OS C Review at 10am(-12:30pm) in ECS 241?
 + Read and watch Adv. Windows module videos
-+ Adv. Windows assignment due at midnight
++ Adv. Windows self-eval due at midnight
 
 ## Fri, 9/2/16
 + Get to campus by 12:30pm to get Survey of DBMS book
