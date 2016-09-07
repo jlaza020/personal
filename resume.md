@@ -3,7 +3,7 @@
     20075 NE 3rd Ct Apt 8 Miami, Florida<br/>
     786-709-6927<br />  
     <a href="mailto:jlaza020@fiu.edu">jlaza020@fiu.edu</a><br /> 
-    GitHub: <a href="https://github.com/jlazarre95">https://github.com/jlazarre95</a><br />
+    GitHub: <a href="https://github.com/jlaza020">https://github.com/jlazarre95</a><br />
 </p>
 
 Career Objective
