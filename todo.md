@@ -1,7 +1,7 @@
-# Wed, 9/7/16
+## Wed, 9/7/16
 + Change Github name and email
 + Invite Mohsen and Dr. Sadjadi on LinkedIn
-+ Work on Senior Project at 9:30 pm (fill out timecard, add user stories)
++ Work on Senior Project at 9:00 pm (fill out timecard, add user stories)
 
 ## Tue, 9/6/16
 + OS Quiz on Ch. 1-3
