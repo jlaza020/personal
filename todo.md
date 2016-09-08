@@ -8,6 +8,7 @@
 
 ## Sun, 9/10/16
 + Work on OS lab (and get deliverables ready / printed)
++ Research on commencement ceremony: https://commencement.fiu.edu/
 
 ## Sat, 9/9/16
 + Continue working on Adv. Windows questions
@@ -16,8 +17,9 @@
 + Check deadlines for other things
 
 ## Fri, 9/9/16
++ Arrive to campus by 11:15 am (work until 1:50 pm) // bring laptop
 + Talk to FIU Transportation: citation, primary vehicle
-+ Sprint Meetings?
++ Sprint Meetings via Google Hangouts @ 2pm (every 2 weeks on Fri)
 + Survey of DBMS discussion due @ 5 pm
 + Daily scrum + work on senior project (every Mon, Wed, Fri, Sat, Sun)
 + Start working on Adv. Windows questions
@@ -26,7 +28,8 @@
 + Figure out time of Sprint Review, Retrospective, etc.
 + Remind Juan that next daily scrum is on Fri, not Thu (today)
 + Research on SDN/OpenFlow
-+ Do online coursework (every Tue, Thu (and Sat, Sun)): videos for both classes
++ Do online coursework - videos, etc. (every Tue, Thu (and Sat, Sun)):
+  Continue watching 'Constraints and Schemas' for Survey of DBMS // stopped at 5:00;
 
 ## Wed, 9/7/16
 + Change Github name and email
