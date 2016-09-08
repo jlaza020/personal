@@ -21,6 +21,7 @@
 + Start working on Adv. Windows questions
 
 ## Thu, 9/8/16
++ Figure out time of Sprint Review, Retrospective, etc.
 + Remind Juan that next daily scrum is on Fri, not Thu (today)
 + Research on SDN/OpenFlow
 + Do online coursework (every Tue, Thu (and Sat, Sun)): videos for both classes
