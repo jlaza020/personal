@@ -1,3 +1,10 @@
+## Tue, 9/12/16
++ Continue reading chapter 4 for OS
++ OS quiz on chapter 4
+
+## Mon, 9/11/16
++ Read chapter 4 for OS
+
 ## Sun, 9/10/16
 + Work on OS lab (and get deliverables ready / printed)
 
