@@ -1,9 +1,8 @@
 <!--
-#:			title
-##: 		sprint,week
-###:		date
-####:		tier-0 subsection
-#####:		tier-1 subsection
+#:      title
+##: 		sprint, week
+###:		day, date
+####:		subsection
 -->
 
 # Senior Project Notes
@@ -17,12 +16,12 @@
 Topics Covered:
 + Basic overview of Scrum
 + How Mingle works
-+ Daily Scrum Meeting
++ Daily scrum meetings
 + Project requirements
 
 Remaining Questions:
 + How strict are team weekly schedules?
-+ Overlap regarding work (check guidelines)
++ Work hours overlap in regard to team (check guidelines)
 
 ### Fri, 9/9/16
 
