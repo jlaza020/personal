@@ -1,10 +1,21 @@
+## Sun, 9/10/16
++ Work on OS lab (and get deliverables ready / printed)
+
+## Sat, 9/9/16
++ Continue working on Adv. Windows questions
++ Work on Adv. Windows assignment
++ Self-eval due @ midnight
++ Check deadlines for other things
+
 ## Fri, 9/9/16
-+ Daily scrum + work on senior project (Mon, Wed, Fri, Sat, Sun)
++ Survey of DBMS discussion due @ 5 pm
++ Daily scrum + work on senior project (every Mon, Wed, Fri, Sat, Sun)
++ Start working on Adv. Windows questions
 
 ## Thu, 9/8/16
-+ Remind Juan that daily scrum is on Fri, not Thu
++ Remind Juan that next daily scrum is on Fri, not Thu (today)
 + Research on SDN/OpenFlow
-+ Do online coursework (Tue, Thu)
++ Do online coursework (every Tue, Thu (and Sat, Sun)): videos for both classes
 
 ## Wed, 9/7/16
 + Change Github name and email
