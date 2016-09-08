@@ -1,3 +1,11 @@
+## Fri, 9/9/16
++ Daily Scrum (Mon, Wed, Fri, Sat, Sun)
+
+## Thu, 9/8/16
++ Remind Juan that daily scrum is on Fri, not Thu
++ Research on SDN/OpenFlow
++ Do online coursework (Tue, Thu)
+
 ## Wed, 9/7/16
 + Change Github name and email
 + Invite Mohsen and Dr. Sadjadi on LinkedIn
