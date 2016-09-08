@@ -16,6 +16,7 @@
 + Check deadlines for other things
 
 ## Fri, 9/9/16
++ Talk to FIU Transportation: citation, primary vehicle
 + Sprint Meetings?
 + Survey of DBMS discussion due @ 5 pm
 + Daily scrum + work on senior project (every Mon, Wed, Fri, Sat, Sun)
