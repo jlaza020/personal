@@ -4,6 +4,7 @@
 
 ## Mon, 9/11/16
 + Read chapter 4 for OS
++ Adv. Windows assignment due @ midnight
 
 ## Sun, 9/10/16
 + Work on OS lab (and get deliverables ready / printed)
