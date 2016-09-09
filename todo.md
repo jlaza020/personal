@@ -19,6 +19,7 @@
 ## Fri, 9/9/16
 + Arrive to campus by 11:15 am (work until 1:50 pm) // bring laptop
 + Talk to FIU Transportation: citation, primary vehicle
++ Read SDN reserach paper and watch VIP video
 + Sprint Meetings via Google Hangouts @ 2pm (every 2 weeks on Fri)
 + Survey of DBMS discussion due @ 5 pm
 + Daily scrum + work on senior project (every Mon, Wed, Fri, Sat, Sun)
