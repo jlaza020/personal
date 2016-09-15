@@ -6,7 +6,7 @@
     GitHub: <a href="https://github.com/jlaza020">https://github.com/jlaza020</a><br />
 </p>
 
-Career Objective
+Career Objectives
 ----------------
 
     To establish career development through solving intellectually challenging problems as a team player
