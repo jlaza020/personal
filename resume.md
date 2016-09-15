@@ -22,7 +22,8 @@ Education
 `Anticipated Graduation: Fall 2017`
 
 **2013-**
-*Bachelor of Science in Computer Science* at **Florida International University** (Miami, Florida) with a GPA of *3.81*.
+*Bachelor of Science in Computer Science* at **Florida International University** (Miami, Florida) with a 
+GPA of *3.81*.
  
 `Anticipated Graduation: Fall 2016`
  
@@ -40,17 +41,17 @@ Work Experience
 **2015-**
 *Student Research Assistant* for **High Performance Database Research Center** (Miami, Florida)  
 
-    Managed, led, and contributed towards various geospatial-related projects - especially those related to 
-    Terrafly, a set of technologies utilized for the visualization and querying of geospatial data. Maintained
-    spatial keyword legacy system by loading, testing, and debugging datasets. Edited and rewrote parts of the
-    legacy system's Java code to solve relevant loading and testing issues or increase the 
-    efficiency/responsiveness of web services. 
+    Managed, led, and contributed towards various geospatial-related projects - especially those related
+	to Terrafly, a set of technologies utilized for the visualization and querying of geospatial data. 
+	Maintained spatial keyword legacy system by loading, testing, and debugging datasets. Edited and
+	rewrote parts of the legacy system's Java code to solve relevant loading and testing issues or 
+	increase the efficiency/responsiveness of web services. 
     
     Wrote small scripts and software tools in C, Python, HTML, and Javascript to automate and/or reduce 
     complexity and time of maintainence tasks. Performed and helped to write research in the area of 
-    geospatial database algorithms - especially join operations, nearest neighbor and range queries, and index 
-    structures. Hosted and led seminars regarding good coding practices as well as database-related algorithms
-    such as DBSCAN.
+    geospatial database algorithms - especially join operations, nearest neighbor and range queries, and 
+	index structures. Hosted and led seminars regarding good coding practices as well as database-related
+	algorithms such as DBSCAN.
 
 **2014-2015**
 *Private Tutor* for **LOVECHILD Development & Transition Partners** (Hallandale Beach, Florida)
@@ -73,55 +74,59 @@ Technical Skills
 + **Programming Languages**: Java, C, C++, PL/pgSQL, JavaScript (NodeJS), C#, and Assembly
 + **Scripting Languages**: Python and JavaScript (client-side)
 + **Source Control Software**: Git/GitHub and Team Foundation Server
-+ **Technical Skills**: Algorithms, back-end development, database design, inter-process communication, multiprocessing, multithreading, object-oriented programmming, procedural programming, regular expressions, scripting, socket programming, software engineering, and software testing.
++ **Technical Skills**: Algorithms, back-end development, database design, inter-process communication,
+multiprocessing, multithreading, object-oriented programmming, procedural programming, regular expressions,
+scripting, socket programming, software engineering, and software testing.
 
 Projects
 --------
 **Learning OpenFlow/SDN network for R&E Ver 1.0.**: *A project for learning and developing for SDN networks.*
 
-    Contributing as an author towards various Python scripts used for testing and validating software-defined
-    networks, especially that of Americas Lightpaths (AmLight) - a networking project used to connect the U.S., 
-    Latin America, and parts of Europe for research and education (R&E). Primarily leveraging technologies 
-    such as OESS to allow for a remote OpenFlow controller for the virtual AmLight network recreated in the 
-    Mininet VM. Serving as the development team lead, utilizing the Agile/Scrum methodology for rapid
-    development. 
+    Contributing as an author towards various Python scripts used for testing and validating 
+	software-defined networks, especially that of Americas Lightpaths (AmLight) - a networking project 
+	used to connect the U.S., Latin America, and parts of Europe for research and education (R&E).
+	Primarily leveraging technologies such as OESS to allow for a remote OpenFlow controller for the
+	virtual AmLight network recreated in the Mininet VM. Serving as the development team lead, utilizing
+	the Agile/Scrum methodology for rapid development. 
 
 **mpdbn**: *A multithreaded database normalization program.*  
 
-    Contributing as the sole author towards a program that normalizes a relational database given a universal 
-    set of attributes and functional dependencies, using multithreading to provide fast results.
+    Contributing as the sole author towards a program that normalizes a relational database given a
+	universal set of attributes and functional dependencies, using multithreading to provide fast results.
 
 **fetchit**: *A YouTube video and audio downloading service.*  
 
     Contributed as the sole author towards an application that allows for the dynamic downloading and 
-    transferring of YouTube web content (video and audio) in various formats via any FTP client. The application
-    consists of an FTP server implemented in C and a download service implemented in Python - both using 
-    multiprocessing for serving concurrent users. It heavily relies on the backend of open-source projects
-    youtube-dl and Pafy to fetch and download YouTube streams.
+    transferring of YouTube web content (video and audio) in various formats via any FTP client. The
+	application consists of an FTP server implemented in C and a download service implemented in Python -
+	both using multiprocessing for serving concurrent users. It heavily relies on the backend of 
+	open-source projects youtube-dl and Pafy to fetch and download YouTube streams.
   
 **MyFIUPrediction**: *An application and library for predicting student grades.*  
 
-    Contributed as an author towards an open-source statistical engine and library implemented in C++, which is
-    then used as part of the backend for a wrapper for my.fiu.edu. The statistical engine uses a popular Machine
-    Learning algorithm J48 Decision Tree to smartly predict student grades, using their transcripts as training 
-    data. The library is made to be heavily extensible, abstracting the type of classification algorithm and the
-    way the training data is received.
+    Contributed as an author towards an open-source statistical engine and library implemented in C++,
+	which is then used as part of the backend for a wrapper for my.fiu.edu. The statistical engine uses a
+	popular Machine Learning algorithm J48 Decision Tree to smartly predict student grades, using their
+	transcripts as training data. The library is made to be heavily extensible, abstracting the type of
+	classification algorithm and the way the training data is received.
 
 Activities
 ----------
-**Google RISE 4 CS**: *Project Manager, Webinar Leader, and Mentor for underprivileged high school CS students.*  
+**Google RISE 4 CS**: *Project Manager, Webinar Leader, and Mentor for underprivileged high school CS
+students.*  
 
-    Managed and led a Google-funded project pioneered by Georgia Tech to increase the involvement and success
-    of underprivledged high school minorities in the field of Computer Science. For two years, planned and 
-    hosted webinars and in-person meetings to prepare students for the AP Computer Science A Exam. 
-    Additionally, coordinated fun Java projects with co-leaders and co-managers for students to participate in.
+    Managed and led a Google-funded project pioneered by Georgia Tech to increase the involvement and
+	success of underprivledged high school minorities in the field of Computer Science. For two years,
+	planned and hosted webinars and in-person meetings to prepare students for the AP Computer Science A
+	Exam. Additionally, coordinated fun Java projects with co-leaders and co-managers for students to 
+	participate in.
   
 **FIU STARS**: *Student Organization Treasurer & Tutor and Mentor for undergraduate CS students.*  
 
-    Served as a treasurer for a FIU STARS - a student-led organization dedicated to public service and active 
-    engagement in the fields of Computer Science and Computer Engineering. Tutored and mentored undergraduate 
-    CS students in various CS and math courses. Dedicated over 100 hours of public service to the organization
-    and the CS community.
+    Served as a treasurer for a FIU STARS - a student-led organization dedicated to public service and
+	active engagement in the fields of Computer Science and Computer Engineering. Tutored and mentored
+	undergraduate CS students in various CS and math courses. Dedicated over 100 hours of public service
+	to the organization and the CS community.
 
 Courses Taken
 -------------
