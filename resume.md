@@ -128,6 +128,7 @@ students.*
 	undergraduate CS students in various CS and math courses. Dedicated over 100 hours of public service
 	to the organization and the CS community.
 
+<!--<br/>
 <br/>
 <br/>
 <br/>
@@ -137,7 +138,7 @@ students.*
 <br/>
 <br/>
 <br/>
-<br/>
+-->
 
 Courses Taken
 -------------
