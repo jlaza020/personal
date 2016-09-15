@@ -77,12 +77,13 @@ Technical Skills
 
 Projects
 --------
-**Learning OpenFlow/SDN network for research and experimentation Ver 1.0.**
+**Learning OpenFlow/SDN network for research and experimentation Ver 1.0.**: *A .*
 
     Contributing as an author towards various Python scripts used for testing and validating software-defined
     networks, especially that of Americas Lightpath (AmLight) - a networking project used to connect the U.S., 
-    Latin America, and parts of Europe for research and education. Serving as the development team lead,
-    utilizing the Agile/Scrum methodology for rapid development. 
+    Latin America, and parts of Europe for research and education. Primarily leveraging technologies such as 
+    OESS to allow for a remote OpenFlow controller for the virtual AmLight network recreated in the Mininet 
+    VM. Serving as the development team lead, utilizing the Agile/Scrum methodology for rapid development. 
 
 **mpdbn**: *A multithreaded database normalization program.*  
 
