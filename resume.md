@@ -73,7 +73,7 @@ Technical Skills
 + **Misc. Languages**: Proficient in SQL, HTML, and Markdown. Working knowledge in CSS.
 + **Operating Systems**: Windows (XP, 7, 8.1, 10) and Unix/Linux (CentOS, Ubuntu).
 + **Programming Languages**: Proficient in C and Java. Working knowledge in C++ and PL/pgSQL.
-+ **Scripting Languages**: Working knowledge in Python.
++ **Scripting Languages**: Working knowledge in Python and Javascript.
 + **Source Control Software**: Team Foundation Server and Git/GitHub.
 + **Technical Skills**: Algorithms, back-end development, database design, inter-process communication,
 multiprocessing, multithreading, object-oriented programmming, procedural programming, regular expressions,
