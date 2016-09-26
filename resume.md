@@ -4,7 +4,7 @@
     786-709-6927<br />  
     <a href="mailto:jlaza020@fiu.edu">jlaza020@fiu.edu</a><br /> 
     GitHub: <a href="https://github.com/jlaza020">https://github.com/jlaza020</a><br />
-    LinkedIn: <a href="www.linkedin.com/in/jahkell-lazarre">www.linkedin.com/in/jahkell-lazarre</a><br />
+    LinkedIn: <a href="https://www.linkedin.com/in/jahkell-lazarre">https://www.linkedin.com/in/jahkell-lazarre</a><br />
 </p>
 
 Career Objective
