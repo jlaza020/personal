@@ -1,5 +1,10 @@
 # COP 4610 Notes
 <hr />
+
++ [Chapter 2] (#chapter-2)  
++ [Chapter 4] (#chapter-4)  
++ [Chapter 5] (#chapter-5)  
+
 ## Chapter 2
 
 **Types of OS services**:
