@@ -1,6 +1,7 @@
 # COP 4610 Notes
 <hr />
 
+## Table of Contents
 [Chapter 2] (#chapter-2)  
 [Chapter 4] (#chapter-4)  
 [Chapter 5] (#chapter-5)  
