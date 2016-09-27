@@ -187,3 +187,85 @@ Libraries:
 	+ Java programs
 
 Parallelism implies concurrency. The converse is NOT true.
+
+
+## Chapter 5
+
+Process scheduling and thread scheduling are often used interchangeably.
+
+Process execution consists of a cycle of CPU execution and I/O wait. Process execution begins with a CPU
+burst, and then an I/O burst. The final CPU burst ends with a system request to terminate execution.
+
+There is usually a large number of short CPU bursts and a small number of long CPU bursts. I/O-bound
+program usually has many short CPU bursts. And CPU-bound program might have a few long CPU bursts.
+
+The short-term scheduler (CPU scheduler) selects the process in the ready queue to be executed once the
+CPU becomes idle. The schedule selects a process form the ones in memory that are ready to execute and
+allocates CPU to that process.
+
+A ready queue could be:
+
++ FIFO
++ Priority Queue
++ Tree
++ Unordered Linked List
+
+Records in ready queues are usually PCBs of the processes.
+
+CPU-scheduling decisions may take place when:
+
++ a process switches from running to waiting state (nonpreemptive / cooperative)
++ a process switches from running state to ready state (for example, when an interrupt occurs)
+(preemptive)
++ a process switches from the waiting state to the ready state (completion of I/O) (preemptive)
++ a process terminates (nonpreemptive / cooperative)
+
+Windows 95 and later utilize preemptive CPU-scheduling.
+
+Preemptive scheduling incurs a cost associated with access to shared data.
+
+The dispatcher is the module that gives control of the CPU to the process selected by the short-term
+scheduler. This function involves:
+
++ switching context
++ switching to user mode
++ jumping to the proper location in the user program to restart the program
+
+**dispatch latency**: time it takes for the dispatcher to stop one process and start another running
+
+Many criteria is used for comparing CPU-scheduling algorithms:
+
++ CPU utilization: keep CPU as busy as possible
++ Throughput: number of processes completed per time unit
++ Turnaround time: how long it takes to fully execute a process to termination time
++ Waiting time: how long a process waits in ready queue (sum of periods spent waiting)
++ Response time: limited by speed of output device
+
+Types of scheduling algorithms:
+
++ First-Come, First-Serve (FCFS)
+	+ Pros
+		+ easy to implement
+	+ Cons
+		+ long average waiting time
++ Shortest-Job-First (SJF): has preemptive and nonpreemptive versions
+	+ Pros
+		+ optimal b/c of minimum average waiting time
+	+ Cons
+		+ cannot be implemented at the level of short-term CPU scheduling
+		+ no way to know the length of the next CPU burst (may be able to predict)
++ Priority Scheduling: equal-priority processes are scheduled in FCFS order. Can be preemptive or
+nonpreemptive
+	+ Pros
+		+ aging solves starvation problem
+	+ Cons
+		+ starving
++ Round-Robin: time-slicing
+	+ Pros
+	+ Cons
+		+ average waiting time is long
++ Multilevel queue scheduling algorithm
+	+ distinction between foreground and background processes
+	+ multiple queues
+	+ each queue has its own scheduling algo. and algo. across queues.
+	+ multilevel feedback queue scheduling algorithm: process moves in between queues
