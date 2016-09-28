@@ -1,4 +1,4 @@
-# COP Advanced Windows Programming
+# COP 4226 - Advanced Windows Programming
 ---
 
 ## Table of Contents
