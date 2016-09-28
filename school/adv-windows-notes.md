@@ -196,6 +196,10 @@ With FullOpen property set, a more advanced view of ColorDialog is opened up.
 
 Fonts are usually measured in points (1/72 of an inch).
 
+DPI: dots per inch.
+
+float pixels = (points * dpi) / 72f;
+
 Design units are used to scale a font to a point size.
 
 Graphics context is just a screen.
