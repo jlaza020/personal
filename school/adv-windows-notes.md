@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-+ [Module 6] (#module-6---fonts-colors-and-dialogs)
++ [Module 6 - Fonts, Colors, and Dialogs] (#module-6---fonts-colors-and-dialogs)
 	+ [Serialization] (#serialization)
 	+ [Serialization Interface] (#serialization-interface)
 	+ [Colors] (#colors)
