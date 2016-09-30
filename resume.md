@@ -117,7 +117,7 @@ Activities
 students.*  
 
     Managed and led a Google-funded project pioneered by Georgia Tech to increase the involvement and
-	success of underprivledged high school minorities in the field of Computer Science. For two years,
+	success of underprivileged high school minorities in the field of Computer Science. For two years,
 	planned and hosted webinars and in-person meetings to prepare students for the AP Computer Science A
 	Exam. Additionally, coordinated fun Java projects with co-leaders and co-managers for students to 
 	participate in.
