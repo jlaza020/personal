@@ -2,13 +2,102 @@
 
 ## Table of Contents
 
-+ [Module 6 - Fonts, Colors, and Dialogs] (#module-6---fonts-colors-and-dialogs)
++ [Module 5 - Fonts, Colors, and Files] (#module-5---fonts-colors-and-files)
 	+ [Serialization] (#serialization)
 	+ [Serialization Interface] (#serialization-interface)
 	+ [Colors] (#colors)
 	+ [Fonts] (#fonts)
 
-## Module 6 - Fonts, Colors, and Dialogs
+## Module 4
+
+### Chapter 2 - MDI
+
+Dragging calculation:
+
++ What is the calculation that is done in order to drag something on the screen?
+	+ Need to know distance in X and Y.
++ Events
+	+ mouseDown
+	+ mouseUp
+
+Psuedo code to do dragging calculation (in .zip file for Chapter 2):
+
+	MouseDown(MouseEventArgs e){
+		bMouseDown = true;  // Used because Points are structures and can't be null.
+		ptMouseDown = e.Location;
+	}
+
+	MouseMove(MouseEventArgs e){
+		if(bMouseDown){
+			Point newLoc = new Point(
+				this.Left + e.X - ptMouseDown.X,
+				this.Top + e.Y - ptMouseDown.Y);
+			this.Location = newLoc;
+		}
+	}
+
+	MouseUp(MouseEventArgs e){
+		bMouseUp = false;
+		/* Should probably do MouseMove() here again */
+	}
+
+Create icons with ToolStrips.
+
+StatusStrips have text and other controls.
+
+To create MDI applications:
+
++ Create parent form with property `IsMdiContainer` set to `true`
++ Create child form with property `MdiParent` set to `this`  // Parent should set this.
++ LayoutMDI: arrange, tile vertical & horizontal, cascade
+
+MDI has menu merging controlled by 2 properties:
+
++ **MergeAction**: append, insert, match, remove
++ **MergeIndex**: all index of one number precede all index of next number
+
+Visual inheritance is for visual interface in designer. Menus, toolstrips,
+status bars CANNOT be edited by the extending class in the designer. Have to
+do it in code.
+
+Code for creating new child in MDI:
+
+	void cmdFileNewChild_Click(object sender, EventArgs e){
+		Form child = new ChildForm();
+		child.Text = "MDI Child " + nextChild;
+		child.Closed += new EventHandler(ChildClosed);
+		++nextChild;
+		child.MdiParent = this;
+		child.Show();
+	}
+
+Parent form changes LayoutMdi/MdiLayout. MergeOrder dictates in which order the
+menu items appear. For example, 1 will be inserted in between menu items with
+MergeOrder 0 and 2. Can arrange child forms in LayoutMdi (ArrangeIcons, 
+TileVertical, TileHorizontal, Cascade, etc.) Menu divider has a MergeOrder as well.
+
+### Chapter 3 - Help
+
+Use a MaskedTextBox to force user to enter data in a specific format. Use the
+Mask property. "0" means any digit. Use literals for phone numbers, dates, ssn,
+etc. Example: (000) - 000 - 0000
+
+**Thorough Validation**: validate everything with Validating event.
+
+**ToolTip** is a component, *NOT* control, to the form. Not always visible. Has
+a property - **extender property**. Any new property added by one object to another object on a form is called an extender property, because the former object extends the latter with additional functionality via a property. ToolTips mostly have static text. ErrorProviders mostly have dynamic text. ToolTips == ErrorProviders.
+
+Populate the error provider with the contents of the tool tip:
+
+	foreach(Control control in this.Controls){
+		String toolTip = toolTip.GetToolTip(control);
+		this.infoProvider.SetError(control, tooltip);
+	}
+
+HelpProvider is like tooltip - provides extender property. Automatically tied
+to the help button and the F1 key.
+
+## Module 5 - Fonts, Colors, and Files
 
 ### Serialization
 
