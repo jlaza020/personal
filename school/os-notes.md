@@ -275,3 +275,10 @@ nonpreemptive
 	+ multiple queues
 	+ each queue has its own scheduling algo. and algo. across queues.
 	+ multilevel feedback queue scheduling algorithm: process moves in between queues
+	
+Quiz on chapters 1-7 on Oct. 20th:
+
++ Skip 1, 2.8, 2.9, 4.4.2, 4.4.3, 4.5.2, 4.5.4, 4.7, 5.9.1, 5.9.2, 5.9.3, 5.10
++ Know Ch. 6 Windows and Solaris
++ KNOW Chapter 4, Chapter 5, Chapter 6, Chapter 7
++ Problems: 6.1-6.9, 6.10, 6.12, 6.14, 6.16, 6.18, 6.21, 6.29, 6.31a
