@@ -278,6 +278,7 @@ nonpreemptive
 	
 Quiz on chapters 1-7 on Oct. 20th:
 
++ 3x5 index card (x1)
 + Skip 1, 2.8, 2.9, 4.4.2, 4.4.3, 4.5.2, 4.5.4, 4.7, 5.9.1, 5.9.2, 5.9.3, 5.10
 + Know Ch. 6 Windows and Solaris
 + KNOW Chapter 4, Chapter 5, Chapter 6, Chapter 7
