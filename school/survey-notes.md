@@ -1,3 +1,5 @@
+## Module 4 - RDBMS and SQL, Part 1
+
 SQL code to go recursive query without loops:
 
 	WITH	RECURSIVE	SUP_EMP(SupSsn, EmpSsn) AS
@@ -103,13 +105,85 @@ Inline views are derived tables: SELECT statement inside another SELECT.
 
 Views (inline views as well?) are great for authorization mechanisms.
 
+## Module 7 - Database Design
+
+Normalization: The process of decomposing unsatisfactory "bad" relations by
+breaking up their attributes into smaller relations
+
++ minimizes redundancy, makes tables independent of one another
++ minimizes anomalies
+
+Different levels of normalization:
+
++ 2NF, 3NF, BCNF:
+	+ based on keys and FDs of a relation schema
++ 4NF:
+	+ based on keys, multi-valued dependencies: MVDs
++ 5NF:
+	+ based on keys, join dependencies: JDs
+
+Additional properties may be needed to ensure a good relational design
+(lossless join, dependency preservation).
+
+Denormalization: The process of storing the join of higher normal form
+relations as a base relation - which is in a lower normal form
+
+Different design philosophies:
+
++ 3NF modeling is good for putting data INTO the db, but hard to get data OUT
++ Dimensional Modeling:
+	+ used for presentation layer of data warehouses
+	+ breaks up relation into different types: dimension, facts, bridges, etc.
+	+ each table type gets a different level of normalization
++ DataVault Modeling:
+	+ based on modeling concepts found in nature
+	+ pattern design not affected by business changes
+
+A key is a minimal superkey.
+
+A prime attribute is a member of some candidate key.
+
+A non-prime attribute is NOT a member of ANY candidate key.
+
+1NF:
+
++ attribues can only have simple, atomic values, and they have to be from that
+attribute's domain
++ disallows
+	+ composite values
+	+ multivalued attributes
+	+ nested relations: attribute values that look like a table
+
+Full functional dependency: an FD Y->Z where removal of any attribute from Y
+means the FD does not hold anymore
+
+2NF:
+
++ if every non-attribute A in R is fully functional dependent on the PK
++ A 1NF table that has a single column PK is automatically in 2NF
++ Each key in a fully FD becomes the new PK of the tables generated from the decomposed one. All attributes determined by these keys are put into their corresponding tables.
+
+3NF:
+
++ deals with transitive functional dependencies: a FD X->Z that can be derived
+from two FDs X-> and Y->Z
++ A 3NF table that is in 2NF and NO non-prime attribute A in R is transitively
+dependent on the primary key. Y can be a candidate key in this case.
++ Each non-prime attribute that determines another attribute will be the new
+PK of one of the newly generated tables. The attributes that are determined by
+said non-prime attribute will join their respective non-primate attributes as
+nonkey attributes.
+
+Normal forms defined informally:
+
++ 1NF: all attributes depend on the key
++ 2NF: all attributes depend on the whole key
++ 3NF: all attributes depend on nothing but the key
 
 
+BCNF: 
 
++ A table is in BCNG if whenever an FD X->A, then X is a superkey of R
++ Stronger than 3NF
 
-
-
-
-
-
-
+Normalization = decoupling.
