@@ -453,3 +453,80 @@ It is possible to make a compound pen. We specify where colors start and end bas
 pen's width: `pen.CompoundArray = new float[] {0.0f, 0.25f, 0.45f, 0.55f, 0.75f, 1.0f}`
 
 This is partitioning the width of the pen. Array must begin with 0.0f and end with 1.0f.
+
+### Align Graphics Path 
+
+The default alignment is centered. Half the pen is inside the control. half is outside. The only other
+implemented alignment is inset. How can an outset pen be drawn? To be continued.
+
+Joins occur at the corners. They control how pointed the corner can be:
+
++ Bevel: cut the corner
++ Round: round the corner
++ Miter: the corner can be as pointed as need
++ MiterClipped: the corner can be pointed up to a certain length, then it is cut off.
+
+5.0f is 5 widths of the pen for MiterClipped.
+
+Curves are drawn from an array of points. A tension controls what the curve does. Tension of 0 for 3
+points looks like a triangle. More tension -> more curvature (it's counter-intuitive).
+
+What do the four points control in a bezier curve? Like a backwards 'S'. The positions of the flexion 
+points pull and push the curves.
+
+Define anti-aliasing. It is using additional colors to blend from one color to another. The Graphics 
+class has the property for setting anti-aliasing? The name of the property is Smoothing Mode.
+
+### Data Binding
+
+Changes in the data class change the values in the UI controls. Changes to the UI controls change the
+values in the data class.
+
+.NET has automated this process as much as possible to decouple data class from UI.
+
+The data class fires a message every time that a piece of data is changed. The UI uses **reflection** to
+call setters in the data class.
+
+This allows the data class to be used with any UI. The UI does add statements to tie itself to the data
+class, but the statements can be changed to be used with any data class.
+
+The data class should implement the INotifyPropertyChanged interface and fire the event every time a
+property changes:
+
+	[Serializable]
+	public class Data : INotifyPropertyChanged
+	{
+
+	/* Only member of interface. */
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+
+	/* Add helper method. */
+
+	protected void OnChange(string propName)
+	{
+		if(PropertyChanged != null)
+		{
+			PropertyChanged(this, new PropertyChangedEventArgs(propName));
+		}
+	}
+
+	}
+
+In the UI class, add bindings for each property from the data class. Tie the data class property to a
+property in the UI: `this.textBoxCredits.DataBindings.Add("Text", data, "Credits");` // Automatically 
+updated in the data class.
+
+Things can be simplified even more with drag-and-drop:
+
++ You can define the data class as a data source.
++ Changed the data class view to Details.
++ Drag the data source onto an empty form.
++ Delete the navigator (it is not needed now).
+
+Input boxes and labels are added for each data class property automatically. 
+
+To fill form with data: `this.dataBindingSource.DataSource = data;`.
+
+When serializing a data object, the binding is erased. Must add new deserialized object as a binding
+source to UI.
