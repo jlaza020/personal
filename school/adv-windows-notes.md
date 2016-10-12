@@ -342,3 +342,114 @@ FontDialog is the standard dialog for choosing fonts. Access the font for data e
 			this.Font = dlg.Font;
 		}
 	}
+
+## Module 7 - Pens, Brushes, Shapes, and Binding
+
+### Introduction
+
+We write to a **graphics** class. 
+
+Graphics encapsulates a GDI+ drawing surface.
+
++ Clip Bounds: What is changing?
++ Dots per inch: Resolution
++ Page Scale: Scaling of pages
++ Transformations: Rotations, Offsets
++ VisibleClipBounds: Specifies what you can print or display.
+
+GDI has been enhanced by later versions of .NET. 
+
+**Manual drawing is bad** because we miss Windows messages.
+
+**ALWAYS use the paint handler**. Repaints the screen when we get paint events. Use the graphics passed 
+in the GraphicEventArgs. 
+
+Only use CreateGraphics when you need to get measurements form the graphics context, like the size of the
+current font.
+
+### Color Brush
+
+**Do not call the paint handler directly**. Use **Invalidate** to make an indirect call to the paint 
+handler. Invalidate is also more efficient. Painting is slow. If several invalidate messages are in the
+message queue, they can be combined into one call to the paint handler. Invalidate(true) used to
+invalidate children.
+
+Depending on display settings and app settings, a resized window may not display properly. By default,
+only the new area of a control is redrawn when the control is resized. The remainder of the control is not
+resized. To change this for a form, set the ResizeRedraw style to true: 
+`this.SetStyle(ControlStyles.ResizeRedraw, true);`
+
+Brushes are used to fill areas with color. Brush is an interface. There are five implementations:
+**Solid, Texture, Hatch, LinearGradient, and PathGradient Brushes**:
+
++ SolidBrush:
+	+ Pass a color to the constructor.
++ TextureBrush:
+	+ Pass an image to the constructor.
+	+ Has a WrapMode: Tile, TileFlipX, TileFlipY, TileFlipXY, Clamp
++ HatchBrush:
+	+ 3 params: Style, foreground, and background colors
+	+ Styles: HatchStyle.Cross, HatchStyle.Wave, etc.
++ LinearGradientBrush:
+	+ 4 params: Area, start color, end color, angle
+	+ Angle: Number or value from LinearGradientMode enumeration: Horizontal, Verical, ForwardDiagonal,
+	BackwardDiagonal.
+
+Predefined blends can be used: `brush.SetBlendTrianglarShape(0.5);` or `brush.SetSigmaBellShape(0.5f);`
+
+A custom blend can be created with ColorBlend, Colors, and Positions. ColorBlend contains the colors and
+the position where that color is 100%. The position is a percentage of the total length of the brush:
+
+	ColorBlend blend = new ColorBlend();
+	blend.Colors = new Color[] {Color.White, Color.Red, Color.Black};
+	blendPositions = new float[] {0.0f, 0.5f, 1.0f};					// Parallel array.
+	brush.InterpolationColors = blend;
+
+### Brushes
+
+PathGradientBrush is constructed from an array of points, so it is the most flexible kind of brush.
+
+Colors blend from the outside of the center. The center point of the brush can be changed. SurroundColors
+can set the colors that will blend from the center to the edge. The colors will be distributed evenly.
+Custom colors can be set just like the LinearGradientBrush.
+
+Can use `Enum.GetNames(typeof(KnownColor))` to get names from an enumeration.
+
+To create a brush: `Brush blackBrush = System.Drawing.Brushes.Black;`
+
+Pens are used to draw the borders of objects rather than fill them in like brushes.
+
+### Pens
+
+Pens implement IDisposable so use using statements.
+
+Can be constructed from color or brush.
+
+Pens have:
+
++ Line caps: Define what end of a line looks like. Anchor or points in the middle of bar graph,
+for example.
++ Dashes
++ Alignment: Where to draw.
++ Joins: Sharp angle at the edge where two things join together.
+
+Constructing pens:
+
++ `new Pen (Color. Red)`
++ `new Pen (Color.Red, 2.0)` // Default is pixels.
++ `new Pen (brush)`
++ `new Pen (brush, 2.0)`
+
+Lines can be dashed. There is an enumeration for standard dashing patters: DashDot, Dot, Dash, DashDotDot,
+Solid, Custom.
+
+Can create custom dash patters using the Custom type:
+
+	pen.DashStyle = DashStyle.Custom;
+
+	pen.DashPattern = new float[] {1f, 1f, 2f, 1f, 3f, 1f, 4f, 1f}; // Width alternates (on, off, on, ...)
+
+It is possible to make a compound pen. We specify where colors start and end based on the percentage of
+pen's width: `pen.CompoundArray = new float[] {0.0f, 0.25f, 0.45f, 0.55f, 0.75f, 1.0f}`
+
+This is partitioning the width of the pen. Array must begin with 0.0f and end with 1.0f.
