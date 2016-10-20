@@ -19,6 +19,10 @@ Types that help the user:
 + communications
 + error detection
 
+Two types of communcation: shared memory and message-passing
+
+Systems calls provide an interface to the services made available by an OS.
+
 Types that don't help the user:
   
 + resource allocation
@@ -105,6 +109,13 @@ etc.)
 
 Mechanisms determine *how* to do something, while policies determine *what*
 will be done.  
+
+Types of OS structures:
+
++ simple structures
++ layered structure
++ microkernels
++ modules
 
 consolidation
 
