@@ -112,10 +112,10 @@ will be done.
 
 Types of OS structures:
 
-+ simple structures
-+ layered structure
-+ microkernels
-+ modules
++ simple structures (coupled, not flexible)
++ layered structure (slower)
++ microkernels (kernel components as system and user-level programs; slower)
++ modules (flexible)
 
 consolidation
 
