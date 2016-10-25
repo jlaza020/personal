@@ -187,3 +187,81 @@ BCNF:
 + Stronger than 3NF
 
 Normalization = decoupling.
+
+## Module 10
+
+### Transaction and System Concepts
+
+**operation**: when >1 DML operations are "tied" together in the real world, and have to either succeed or
+fail together as a unit.
+
+**Recovery Manager** of DBMS keeps track of these operations:
+
++ BEGIN_TRANSACTION
++ READ or WRITE
++ END_TRANSACTION
+
+DBMS keeps a log, which is a list of all the transaction operations that hit a DB. Mostly, READ operations
+are not written to these log files. The DBMS writes transaction operations to the log file immediately
+when they happen. The log file is append-only.
+
+Log files are backed up separately, like "mini-backups".
+
+**Commit point**: when all the transactions are successful and have been recorded in the log. A 
+**commit record** is then written to the log, which means that all these changes can be written to the
+main data files of the DB.
+
+Log files are on disk, but their changes are first written to memory, then later to disk.
+
+Log buffers hold the last part of the log data. They are written to disk frequently.
+
+**DBMS-Specific Buffer Replacement Policies**: If all the memory buffers become full, the DBMS has to 
+figure out which buffers to write to disk so that they can be freed up in memory.
+
+### Transaction Schedules
+
+**Schedule**: a list of execution of transaction operations, in order. May contain operations from
+different transactions that are running at the same time.
+
+For Recoverability and Concurrency Control, we are interested in reads, writes, commits, and rollbacks.
+
+Operations will conflict if they have the following 3 conditions:
+
++ Belong to different transactions.
++ Access the same item.
++ At least one of the operations is a write.
+
+2 operations are conflicting if changing their order alters the final outcome.
+
+#### Characterizing Schedules Based on Recoverability
+
+Once a transaction is committed, it should never be necessary to roll it back - this would violate the
+Durability property and is a nonrecoverable schedule.
+
+A **recoverable** schedule is one where: it only commits *after* the transactions that wrote the data 
+which it is reading. For example, if transaction A reads uncommitted data written by transactions S, then
+S is rolled back, A must also be rolled back. This is called **cascading rollbacks**.
+
+### Transaction Support in SQL
+
+A single SQL statement is always considered to be atomic.
+
+SET TRANSACTION statements specify the Transaction Settings:
+
++ Access mode: READ ONLY vs. READ WRITE
++ Isolation level: Only affects READs.
+	+ Dirty read: Can see uncommitted changes.
+	+ Nonrepeatable read: Can see only committed changes, but if you read the same data twice, you may
+	get different values.
+	+ Repeatable read: Can see only committed changes. You will always get the same value no matter how
+	many times you read the same value, BUT you can get new rows in a result set if some other transaction
+	inserted them between your reads (phantom rows).
+	+ Serializable: Can only see committed changes. You will always get the same value and NO phantom rows
+	are allowed.
+	+ Snapshot Isolation: When a transaction starts writing data, an old copy of the data is created and
+	kept in a separate location. Disallows other transactions from seeing this new value, only allows the
+	old value.
+
+Notes:
+
+	Desirable Properties of Transactions is the wrong video.
