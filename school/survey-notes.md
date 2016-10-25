@@ -188,7 +188,7 @@ BCNF:
 
 Normalization = decoupling.
 
-## Module 10
+## Module 10 - Transactions and Concurrency
 
 ### Transaction and System Concepts
 
