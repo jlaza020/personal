@@ -530,3 +530,18 @@ To fill form with data: `this.dataBindingSource.DataSource = data;`.
 
 When serializing a data object, the binding is erased. Must add new deserialized object as a binding
 source to UI.
+
+## Module 8 - Threads, Text, and Transforms
+
+### Thread Introduction
+
+Each Windows Forms app has a main thread that shows the UI. The UI thread should not do a lot of
+processing.
+
+Threads are **non-deterministic**: the order of execution is unknown.
+
+Thread limitations for COP 4226 because of shared data:
+
++ A thread can only access local variables, but not parameters.
++ A thread should not make changes to member variables, parameters, static variables, or properties.
++ A thread will not read member variables (even though it technically could with no problem).
