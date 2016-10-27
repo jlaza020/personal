@@ -545,3 +545,200 @@ Thread limitations for COP 4226 because of shared data:
 + A thread can only access local variables, but not parameters.
 + A thread should not make changes to member variables, parameters, static variables, or properties.
 + A thread will not read member variables (even though it technically could with no problem).
+
+### Using Delegates to Start Threads
+
+Behind the scenes, a delegate is used when creating a thread.
+
+Example code for creating a thread:
+
+	Thread thread = new Thread(ThreadStart);
+	thread.Start(value); // Argument passed to ThreadStart.
+
+	virtual protected void ThreadStart(object obj)
+	{ 
+		Work(obj); // Helper method.
+	}
+
+Windows prevents threads from updating a UI variable it did not create.
+
+Events are special types of delegates.
+
+Code for defining a delegate:
+
+	protected delegate void MyDel(int i, float f, MyClass z);
+
+A delegate can have many parameters.
+
+Code for creating a delegate:
+
+	MyDel myDel = new MyDel(MyDelHandler);
+	myDel(10, 12.4, myClass);
+
+The delegate calls the method indirectly.
+
+Delegates are better than simple threads for these reasons:
+
++ Parameter to delegate can be any type.
++ More than one parameter can be passed.
++ Delegate threads are allocated from a thread pool, so threads can be reused.
+
+When a delegate is fired this way though, it is synchronous (like calling `Invoke`).
+
+`BeginInvoke` is used to make an asynchronous call to the delegate method.
+
+`BeginInvoke` has two more parameters:
+
++ A method to call when the thread ends. // Callback method.
++ The delegate that is making the call.
+
+How to call `BeginInvoke`:
+
+	calcPi.BeginInvoke((int) declimalPlacesNumericUpDown, EndCalcPi, calcPi);
+
+End Thread Callback Method:
+
+	virtual protected void EndCalcPi(IAsyncResult result)
+	{
+		try
+		{
+			CalcPiDelegate calcPi = (CalcPiDelegate)result.AsyncState; // Retrieve delegate.
+			calcPi.EndInvoke(result); // Cleans up thread resources.
+		}
+		catch(Exception ex)
+		{
+			ShowProgress(ex.Message, 0, 0);
+		}
+	}
+
+But it STILL crashes. The new thread is trying to access the UI controls. We are back to square one!
+
+The `InvokeRequired` property of a control is true if a thread that did not create the control is trying
+to update the control.
+
+### Simplified Threading
+
+The Control class also has `Invoke` and `BeginInvoke`, but a new thread is NOT created. Instead they
+redirect to the thread that created the control (i.e., find the thread that created this control and run
+this code on that thread). 
+
+`control.Invoke(delegate)`; // Runs the delegate synchronously on the thread that created the control.  
+`control.BeginInvoke(delegate);` // Does the same thing asynchronously.
+
+Control Invoke Steps:
+
++ Create another delegate for the ShowProgress method.
+	+ `Show ProgressDelegate showProgress = new ShowProgressDelegate(ShowProgress);`
++ Call this delegate with the Invoke method of the main form.
+	+ `this.Invoke(showProgress, new object[] {pi.ToString(), digits, 0});`
+
+Simplified Threading is a feature added to .NET 2.0. The `BackgroundWorker` component creates delegates
+in the background and encapsulates them in the simple method calls.
+
+Start a thread asynchronously with 
+`this.backGroundWorker.RunWorkerAsync((int)decimalPlacesNumericUpDown.Value);` // Drop component on  form.
+
+The background worker has an event named DoWork. Add a handler for it and start the work the thread.
+
+	void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
+	{
+		calcPi((int)e.Argument);
+	}
+
+To report progress:
+
++ Set the property WorkerReportsProgress to true in the BackgroundWorker.
++ Add a handler for the ProgressChanged event, in the BackgroundWorker.
++ Update the UI in ProgressChanged. The method will be run on the thread that created the
+BackgroundWorker.
+
+ReportProgress can be called in two ways:
+
++ `backgroundWorker.ReportProgress(percentageChanged);`
++ Pass a custom object to ReportProgress. The custom object can be modified by either thread.
+	+ `backgroundWorker.ReportProgress(percentageChanged, obj);`
+	+ Use custom class to send data to the UI.
+		+ `CalcPiUserState state = new CalcPiUserState(pi.ToString(), digits, i + digitCount);`  
+		`backgroundWorker.ReportProgress(0, state);`  
+		The method can calculate the percentage of progress from the data in the custom class.
+
+Have a ProgressChanged event handler in UI to unpack CalcPiUserState and to call ShowProgress.
+
+To have a callback, register a handler with the RunWorkerCompleted event. This is run on the UI thread.
+
+DoWorkEventArgs in DoWork EventHandler has a Result property that can be used to set the result of a
+thread.
+
+Accessing e.Result will cause an error if the thread crashes.
+
+Code to use before accessing e.Result.
+
+`if(e.Error == null){ // Access e.Result }`
+
+### Canceling a Thread
+
+ReportProgress is asynchronous, not synchronous. 
+
+Safe solution is to use the control.Invoke method to call the progress handler. This call is synchronous.
+Use it instead of ReportProgress to pass data to the UI, when both threads can change the data.
+ReportProgress is safe, only if values are read-only like structures.
+
+If the UI update method expects a custom class that contains the user state, like 
+`void ShowProgress (UserState state);` Create a delegate that can register a method that updates the UI.
+`delegate void ShowProgressDelegate(UserState state);`
+
+Instantiate an instance of the delegate: 
+`ShowProgressDelegate showProgressDelegate = new ShowProgressDelegate(ShowProgress);`
+
+Call the delegate with: `this.Invoke(showProgressDelegate, userState);` // Created on UI.
+
+Now, both threads can modify userState without shared access by the other thread.
+
+Control.Invoke passes ownership and is synchronous. By passing a custom object as the parameter, both
+threads can read an modify it, but only one thread can change it at a time, so there is no chance for
+data corruption.
+
+To make an inefficient pause, use `Thread.Sleep(1000);`. This is busy waiting.
+
+A better pause is that the main will create an event and call one of two methods: Set and Reset. The
+thread will call the WaitOne method to see if it should pause. If the main form calls Reset, then the next
+time the thread reaches the WaitOne call, the thread will stop. It will wait until the main form calls Set
+before it continues to run. The ManualResetEvent is used to fire an event when a condition is met.
+
+pauseEvent is an instance variable but it is thread-safe. Typically, call WaitOne whenever progress is
+reported.
+
+If a form is closing, close the thread in FormClosing EventHandler.
+
+Always pass data synchronously. Control.Invoke is perfect for doing this.
+
+### Passing Data to a Thread
+
+BackgroundWorker has a property to let it know that the main thread wants it to cancel. The variable is
+read in the worker. The property WorkerSupportsCancellation must be set. Indicate the thread should cancel
+with bw.CancelAsync(). CancellationPending is a property used to check the flag - whether a cancellation
+is pending or not. Test the worker is running with the property bw.IsBusy.
+
+CancelAsync does NOT cancel the thread. A thread must check frequently to see if cancellation has been
+requested. The running example in the class will check after every 9 digits of PI is calculated.
+
+An example of manually canceling the thread:
+
+	if(bw.CancellationPending)
+	{
+		closeResources();	// Helper method.
+		break;
+	}
+
+Remember that CancellationPending will remain true until DoWork completes. The worker should detect if the
+thread has been cancelled and set the Cancel property in the event args to true.
+
+In RunWorkerCompleted event handler in UI thread, check if thread is canceled (e.Canceled in
+RunWorkerCompletedEventArgs).
+
+How do we get the data from the UI to the thread? In ReportProgress(), the object parameter passed by
+reference can be used to send data from the UI to the thread. Only pass a variable that is created in the
+thread. The main thread will unload the data and then modify the data.
+
+Once ReportProgress returns, the worker thread can use the new data from the main thread. Create variable
+in thread and pass it to the UI.
