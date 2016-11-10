@@ -742,3 +742,231 @@ thread. The main thread will unload the data and then modify the data.
 
 Once ReportProgress returns, the worker thread can use the new data from the main thread. Create variable
 in thread and pass it to the UI.
+
+## Week 11 - Printing and Cloning
+
+### 11.1: Printing Basics
+
+**Print classes**:
+
++ `PrintDocument` describes the characteristics of what to be printed.
++ `BeginPrint`, `EndPrint`, `PrintPage`, `QueryPageSettings` are the four events in a `PrintDocument`.
++ `PrintControllers` talk to the printer.
++ `PrintPreview` allows the user to see what the printed document will look like.
+
+Standard dialogs for print and print preview.
+
+The minimum that needs to be done is add a print document to the application and handle the `PrintPage` event.
+
+Event `PrintPage` has a `PrintPageEventArgs`. It is similar to painting:
+
+	private void printDocumentSimple_PrintPage(object sender, PrintPageEventArgs e)
+	{
+		Graphics g = e.Graphics;
+		using(Font font = new Font("Lucida Console", 36))
+		{
+			g.DrawString("Hello, \nPrinter", font, Brushes.Black, 0, 0);  // (0,0) is the start point.
+		}
+	
+	}
+
+**How to use a StandardPrintController**:
+
++ All print documents use a print controller class to interface with the actual printer. The default print controller displays the progress of the printing. It's the one that sends the page to the printer.
++ A standard print controller does not display the print page dialog. To use it, set the print document's print 
+controller property: `printDocument.PrintController = new StandardPrintController();` Now, the dialog will not appear.
+
+**How to use preview controls and dialogs**:
+
++ The preview control and dialog are useful, since they show how the doc will appear on the printer without actually printing.
++ For both, drag the control or component onto the dialog and set the `PrintDocument` property. Use the control to 
+embed a print preview in another control.
+
+**Multiple pages don't print automatically**:
+
++ In the `PrintPage` handler, set the `HasMorePages` property of `PrintPageEventArgs` to true to have the method called again.
++ The programmer must determine if there are more pages.
++ THe programmer must determine what to print on each page.
+
+**How to define to display the correct information for each page?**
+
+Don't use a loop! Simply print content, keep a member variable for counting and set `HasMorePages` to `true`.
+
+Use `BeginPrint` and `EndPrint` to create and dispose resources that are reused in the print page event.
+`PrintEventArgs` has `Cancel` and `PrintAction`. `PrintAction` indicates if the current action is to file, printer, or preview:
+
+	bool preview = false;
+	private void printDocument_BeginPrint(object sender, PrintEventArgs e)
+	{
+		preview = (e.PrintAction == PrintAction.PrintToPreview);
+		m_fontPrinter = new Font("Lucida Console", 72);
+	}
+
+	private void printDocument_EndPrint(object sender, PrintEventArgs e)
+	{
+		m_fontPrinter.Dispose();
+		m_fontPrinter = null;
+		m_nPage = 1;
+	}
+
+### 11.2: Printing Within Page Bounds
+
+When painting, the client rectangle is often used as the boundary of the drawing area (page: edge of paper vs
+within margins). Printing outside of margins = header, footer.
+
+`PrintPageEventArgs` has properties for the boundaries of the page:
+
++ `PageBounds` is the entire page.
++ `MarginBounds` is the `PageBounds`, offset by the margins.
+
+Each of these returns measurements in display units on printer, 1/100 inch.
+
+Not all printers can print to the edge of the page, but page bounds always start at (0,0) and has the size of the
+paper, not the size of the printable area.
+
+Page bounds has the size of the paper, not the size of the printable area. (**THIS IS A PROBLEM!**)
+
+**How to calculate physical bounds** (see zip file from Ch. 8):
+
++ Use `PageSettings` and `Graphics` context to get the actual constraints of the printer.
++ Use `GetRealPageBounds`, `GetRealMarginBounds` to be sure that the margins are correct for all printers.
+
+**RealPageBounds** (see 11:33 of video):
+
++ In print preview mode, there is not a problem, since the page is virtual.
++ The Graphics object has a property that returns the rectangle that printer can actually print in: `VisibleClipBounds`.
++ Since this is part of the Graphics, it might have a Page Scale. Transform the points from Page to Device and
++ then from Device to Display.
+
+**MarginBounds**:
+
++ The `VisibleClipBounds` always starts at (0, 0).
++ The margin bounds are offset from this.
++ Margins have to be modified in order to be accurately represented on the printer (see end of video).
+
+### 11.3: Using Margins
+
+`PrintPageEventArgs` has a `PageSettings` property. `PageSettings` has properties that specify the distance from the edge of the paper to the upper left corner of the clip bounds. These are known as `HardMarginX` and `HardMarginY`. Use these to offset the clip bounds.
+
+**How to modify the margin bounds**:
+
+	public static Rectange GetRealMarginBounds(PrintPageEventArgs e, bool prview)
+	{
+		if(preview)  // Set by BeginPrint.
+			return e.MarginBounds;
+
+		Rectangle marginBounds = e.MarginBounds;  // Display units (everything in display units).
+
+		marginBounds.Offset((int)-e.PageSettings.HardMarginX, (int)-e.PageSettings.HardMarginY);
+
+		return marginBounds;
+	}
+
+**How to print outside the margins:**
+
+Headers and footers are printed outside the margins. `StringFormat` can be used to place text in the footer area in
+the lower right corner of the page: far, far. Header in the center top of page: near, center.
+
+	StringFormat format = new StringFormat();
+	format.Alignment = StringAlignment.Far;
+	format.LineAlignment = StringAlignment.Far;
+	
+	/* preview is the member variable from earlier. */
+	g.DrawString("footer stuff", font, brush, PrintUtils.GetRealPageBounds(e, preview), format);
+
+**Page settings**:
+
++ Use a `PageSetupDialog` to change the default page settings for the app.
++ Page settings can be changed dynamically for each page.
++ `PageSettings` is a property of the `QueryPageSettingsEventArgs`.
++ Use the `QueryPageSettings` handler. It is called before each page.
++ Change the page settings that are passed in the `QueryPageSettingsEventArgs`, not the `PageSetupDialog` for the
+form.
++ The `QueryPageSettings` method is called before every `PrintPage` call. It can be used to dynamically change the
+margins for every page.
+
+**How to allow some pages:**
+
++ Set the `AllowSomePages` property to true in the printDialog class.
++ In the `PrintSettings`, set the `ToPage`, `FromPage`, `MinPage`, and `MaxPage` properties.
++ The `PrintSettings` are accessible from the printDocument class.
++ Print handler must be able to read these and print the appropriate pages.
+
+All printing is passed to the default printer, unless a PrintDialog is used to change it:
+
++ Set up the min, max pages before the dialog opens.
++ Set up from page and to page...
++ Set `AllowSomePage` to true...
+
+### 11.4: Printing Techniques
+
+**How can you print each string in an array so they start on a new line and wraps them in the printable area?**
+(see beginning of video)
+
+**How can the number of pages to be printed known before the pages are printed?**
+
+This is difficult. .NET can count the pages. This can be done using a `PreviewPrintController`. It knows the number of pages after printing. Create a custom `PreviewPrintController` and override the `OnStartPrint` and `OnStartPage`
+event handlers.
+
+**Write a method that will** (see 11:20 and 12:40):
+
++ Save the current print controller.
++ Set the print controller to the custom one.
++ Print the document (virtually).
++ Retrieve the page count.
++ Reset the print controller to the original one.
++ Show `PrintDialog`.
+
+**How can a large text file be displayed over multiple pages, performing word wrap as expected in a word processor?** (see 16:30)
+
+The `FormatFlags` property can be set to `StringFormatFlags.LineLimit` and be used in StringFormat to display only
+a full line. MeasureString has an overload that has two out paramseters: `out int charactersFitted` and `out int linesFilled`.
+
+Use the number of characters that fit in the page and the substring method to find the remaining string that must
+be printed. `stringToPrint = stringToPrint.Substring(characters OnPage)`
+
+### 11.5: Copying and Cloning
+
+	Not in the textbook.
+
+Each object has `MemberWiseClone`, but it only makes a shallow copy of an object. The method is protected:
+
++ Create a new object.
++ Copy the non-static fields.
++ Value fields are bit-by-bit copies.
++ Object fields point to the same object as the original.
+
+The `ICloneable` interface has one member: `public object Clone()``.
+
+Four ways to implement a deep copy:
+
++ Use `ICloneable`.
++ Use copy constructors.
++ Use serialization.
++ Use reflection.
+
+**The** `ICloneable` **interface simply requires that your implementation of the** `Clone` **method return a copy of the current object instance**:
+
++ It does not specify whether the cloning operation performs a deep copy, a shallow copy, or something in between.
++ It does not require all property values of the original instance to be copied to the new instance.
++ Not recommended to be implemented in public APIs.
++ Call `this.MemerbwiseClone()` for each field where the field's class also implements `ICloneable`.
+
+**Deep cloning with a constructor** (see 10:30):
+
++ Like `ICloneable`.
+
+**Serialization  with memory streams**:
+
++ Serialize the object to be deep copied.
++ Restore to a different object.
+
+To deserialize, the stream must be reset: `stream.Seek(0, SeekOrigin.Begin)`.
+
+	MemoryStream stream = new MemoryStream();
+	CopyClass serial = new CopyClass();
+	Serialize(stream, serial);
+	Object obj = Deserialize(stream);
+	CopyClass serial2 = obj as CopyClass;
+
+**Reflection is too damn hard!**
