@@ -65,9 +65,9 @@ Technical Skills
 ----------------
 + **Applications**: Microsoft Office and Virtual Box.
 + **Communication Software**: Slack and Google Hangouts.
-+ **Databases**: Proficient in PostgreSQL. Working knowledge in MongoDB.
++ **Databases**: Working knowledge in PostgreSQL.
 + **Development Environments**: Visual Studio and Netbeans.
-+ **Development Methodologies**: Scrum and Agile.
++ **Development Methodologies**: Agile / Scrum.
 + **Development Software Tools**: Mingle and Trello.
 + **Frameworks**: Working knowledge in Twitter Bootstrap.
 + **Misc. Languages**: Proficient in SQL, HTML, and Markdown. Working knowledge in CSS.
