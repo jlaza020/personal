@@ -970,3 +970,123 @@ To deserialize, the stream must be reset: `stream.Seek(0, SeekOrigin.Begin)`.
 	CopyClass serial2 = obj as CopyClass;
 
 **Reflection is too damn hard!**
+
+## Week 12 - Images
+
+### Images Introduction
+
+**Image Class**
+
++ The Image (interface) class contains Bitmap and WMF formats. EMF is a newer version of WMF (Windows Meta File).
++ Draw an image on the graphics context with g.DrawImage(file, point). // Starting point.
++ The image will be drawn to its full size.
+
+**Scaling and Clipping**
+
++ Scale the image to given rectangle: `g.DrawImage(img, rectScaling);`
++ Clip to the rectangle (and maybe scale): `g.DrawImage(img, destRect, srcRect, GraphicsUnit.Pixel)`
++ If the src and dest are the same size, then no scaling is done.
+
+**Panning**
+
++ To implement panning, change the source rectangle and Invalidate.
++ Implement buttons to change the size of the offset.
+
+**Skewing**
+
++ Skewing will scale the image to a parallelogram, instead of a rectangle.
++ Send DrawImage an array of three points.
++ The fourth point will be calculated to make a parallelogram.
++ `g.DrawImage(img, points);`
+
+**Rotating and Flipping**
+
++ Before drawing the image, rotate/flip it.
++ Calls to these methods are cumulative. FlipX followed by FlipX does not have a flip.
++ Use the RotateFlipType enumeration to define the oepration.
++ img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+
+**Enum Class - Get Names, Parse**
+
+Use the enum class to retrieve the names of all the elements in an enum. Create a sorted list of names in the enum. In the loop, retrieve the enumerated value from the string:
+
+	string[] rotateFlipNames = Enum.GetNames(typeof(RotateFlipType));
+	Array.Sort(rotateFlipNames);
+	
+	foreach(string name in rotateFlipNames)
+	{
+		RotateFlipType rotateFlip = (RotateFlipType)Enum.Parse(typeof(RotateFlipType), rotateFlipName);
+		bitmap.RotateFlip(rotateFlip);
+	}
+	
+To get values: If a sorted list is not needed, then just loop through the values by calling GetValues:
+	
+	foreach (RotateFlipType rotateFlip in Enum.GetValues(typeof(RotateFlipType)))
+	{
+		...
+	}
+	
+**Recoloring**
+
++ Define a ColorMap for each color to change.
+	+ Set the OldColor property to the color to find.
+	+ Set the NewColor property to the color that will replace the old color.
++ Define an ImageAttributes and set the remap table to the ColorMap.
++ Call DrawImage with the image attributes.
+
+Example:
+
+	ColorMap[] colorMap = new ColorMap[1]
+	colorMap[0] = new ColorMap()'
+	colorMap[0].OldColor = Color.Lime;
+	colorMap[0].NewColor = Color.White;
+	
+	ImageAttributes attr = new ImageAttributes();
+	attr.SetRemapTable(colorMap);
+	
+	g.DrawImage(bmp, rect, 0, 0, rect.Width, rect.Height, g.PageUnit, attr);
+
+###
+
+The call `bmp.MakeTransparent()` makes an image transparent.
+
+**Drawing to Images**
+
+3 Steps:
+
++ Create a bitmap with the desired width, height, and pixel depth (number of color for each pixel).
++ Create a graphics context from the bitmap.
++ Draw on the graphics context.
++ Save the image.
+
+**Create Image Graphics**
+
+Obtain the pixel depth for the existing screen by creating a graphics object and passing it to the constructor of the
+bitmap:
+
+	Graphics display = this.CreateGraphics();
+	Image img = new Bitmap(width, height, display);
+	Graphics imageGraphics = Graphics.FromImage(img);
+	
+After drawing on the graphics context, the image can be saved. The default format is PNG, regardless of the extension: `img.Save(@"c:\image.png");`. Change the format with a second parameter from ImageFormat: Bmp, Emf, Gif, Icon, Jpeg, 
+Tiff, Wmf: `img.Save(@"c:\image.gif", ImageFormat.Gif);`.
+
+**Icons**
+
+Icons are different than regular images. Icons have several bitmaps. The diffrent bitmaps are for different sizes.
+
+Convert a regular bitmap to an icon: 
+
+	IntPrt hIcon = bmp.GetHicon();
+	Icon icon = Icon.FromHandle(hICon);
+
+Draw an icon on the screen with:
+
+	g.DrawIcon(icon, rect);
+	g.DrawIconUnstretched(icon, rect);
+	Steal icons from Windows executables with Icon.ExtractAssociatedIcon("program.exe");
+
+Use Visual Studio to create and edit icons. Icons have many different resolutions, so edit all of them.
+
+
+
