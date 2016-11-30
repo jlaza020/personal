@@ -1088,5 +1088,54 @@ Draw an icon on the screen with:
 
 Use Visual Studio to create and edit icons. Icons have many different resolutions, so edit all of them.
 
+## Week 15 - Tasks in .NET 4
 
+### Tasks Introduction
 
+**What are tasks?**
+
+* Tasks (one type) represent a single operation that does not return a value and usually executes asynchronously.
+* Can use `Status` property, as well as the `IsCanceled`, `IsCompleted`, `IsFaulted` properties to determine state of a task.
+
+**Task.Run**
+
+* Since .NET 4.5, create and start a Task with `Task.Run(Action)`
+* The old way is `Task.Factory.StartNew(Action)`
+
+Example code:
+
+	public static void Dolt()
+	{
+
+		int ctr = 0;
+		
+		for (ctr = 0; ctr <= 10000000; ctr++) {}
+		Console.WriteLine("Finished {0} loop iterations", ctr);
+
+	}
+
+	public static void Main()
+	{
+
+		Task t = Task.Run((Action)Dolt);
+		t.Wait();
+
+	}
+
+**Wait Options**
+
+* `Wait(Int32)`: wait for completion or elapsed time.
+* `Wait(TimeSpan)`: wait for completion or elapsed time.
+* `Wait(CancellationToken)` - cancel the wait by using a cancellation token.
+* `WaitAll(Task[])`: wait for all the tasks in the array to complete.
+* `WaitAny(Task[])`: wait for one of the tasks in the array to complete.
+
+**Task<Tresult>**
+
+* Returns a task whose method returns a value.
+* Access the value with the `Result` property.
+* Accessing the `Result` property is like calling `Wait()`.
+
+**Task and Await**
+
+* Awaitable methods return `Task` or `Task<T>`.
